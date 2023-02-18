@@ -42,6 +42,8 @@ object DependencyVersion {
 dependencies {
     /** spring starter */
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    /** feature flag */
     implementation("com.azure.spring:azure-spring-cloud-feature-management-web:${DependencyVersion.FEATURE_FLAG}")
 
     /** kotlin */

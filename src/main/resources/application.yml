@@ -1,0 +1,3 @@
+feature-management:
+  feature-a: true
+  feature-b: false
