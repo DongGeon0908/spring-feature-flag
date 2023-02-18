@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/v1/test")
+@RequestMapping("/api/v1/feature-flag")
 class TestController {
-    @GetMapping("/health")
+    @GetMapping("/a")
     @FeatureGate(feature = "feature-a")
-    fun getHealth() = ResponseEntity.ok("Health OK")
+    fun executeA() = ResponseEntity.ok("Feature A Execute")
 
-    @GetMapping("/status")
+    @GetMapping("/b")
     @FeatureGate(feature = "feature-b")
-    fun getStatus() = ResponseEntity.ok("Good")
+    fun executeB() = ResponseEntity.ok("Feature B Execute")
 }
